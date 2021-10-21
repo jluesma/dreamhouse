@@ -46,6 +46,7 @@ public with sharing class BotController {
                     List<String> params = new List<String>();
                     for (Integer i=1; i<=utteranceMatcher.groupCount(); i=i+1) {
                         params.add(utteranceMatcher.group(i).trim());
+                        String religion = 'A';
                     }
                     return h.handle(utterance, params, session, fileName, fileContent);
                 }
